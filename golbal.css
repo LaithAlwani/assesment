@@ -1,0 +1,100 @@
+body,
+html {
+    /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+    line-height: 1.45;
+    scroll-behavior: smooth;
+    background-color: #ffffff;
+    color: #222;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+header span {
+    margin-bottom: 6rem;
+}
+
+.float-right {
+    float: right;
+    margin: 0 0 1rem 1rem;
+    max-width: 40%;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+figure figcaption {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0.25rem;
+}
+
+.image {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    border: 10px black solid;
+    background-position: center;
+    object-fit: cover;
+}
+
+.media {
+    margin: 1rem 0;
+}
+
+.clear {
+    clear: both;
+}
+
+button {
+    display: block;
+    width: 200px;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+
+}
+
+footer span {
+    display: block;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    height: 320px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 320px;
+}
+
+table{
+    width: 100%;
+}
+table,
+th,
+td {
+    border: 1px solid black;
+    padding-inline: 1rem;
+}
+
+table thead{
+    background-color: grey;
+}
