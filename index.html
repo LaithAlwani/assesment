@@ -1,264 +1,465 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="./wet-boew-dist-4.0.93/theme-wet-boew/css/theme.min.css">
-  <title>Coding Test 2025 — Canada Economic Development for Quebec Regions</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="./wet-boew-dist-4.0.93/theme-wet-boew/css/theme.min.css"
+    />
+    <title>
+      Coding Test 2025 — Canada Economic Development for Quebec Regions
+    </title>
 
+    <!-- Minimal styling fallback to ensure floating image & basic layout work even if WET isn't loaded -->
+    <style>
+      body,
+      html {
+        /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+        line-height: 1.45;
+        scroll-behavior: smooth;
+        background-color: #ffffff;
+        color: #222;
+      }
+      header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      header span {
+        margin-bottom: 6rem;
+      }
 
-  <!-- Minimal styling fallback to ensure floating image & basic layout work even if WET isn't loaded -->
-  <style>
-    body { font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; line-height: 1.45; margin: 1rem; color: #222; }
-    header h1 { margin: 0 0 0.25rem 0; font-size: 1.6rem; }
-    header p.lead { margin: 0 0 1rem 0; color: #555; }
-    nav.toc { margin: 1rem 0; padding: 0.5rem; border: 1px solid #ddd; background: #fafafa; }
-    nav.toc ol { margin: 0; padding-left: 1.25rem; }
-    .float-right { float: right; margin: 0 0 1rem 1rem; max-width: 40%; }
-    figure img { max-width: 100%; height: auto; display:block; }
-    figure figcaption { font-size: 0.9rem; color: #555; margin-top: 0.25rem; }
-    .media { margin: 1rem 0; }
-    .clear { clear: both; }
-    footer { margin-top: 2rem; border-top: 1px solid #eee; padding-top: 1rem; color: #555; font-size: 0.95rem; }
-    /* accessibility helpers */
-    .sr-only { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
-  </style>
-</head>
-<body class="container">
+      .float-right {
+        float: right;
+        margin: 0 0 1rem 1rem;
+        max-width: 40%;
+      }
+      figure img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      figure figcaption {
+        font-size: 0.9rem;
+        color: #555;
+        margin-top: 0.25rem;
+      }
+      .image {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        border: 10px black solid;
+        background-position: center;
+        object-fit: cover;
+      }
+      .media {
+        margin: 1rem 0;
+      }
+      .clear {
+        clear: both;
+      }
+      button{
+        display: block;
+        width: 200px;
+        background-color: black;
+        color: white;
+        border-radius: 8px;
+        padding: 1rem;
+        margin-bottom: 2rem;
 
-  <header role="banner" id="wb-banner" class="text-center">
-    <h1 id="page-title">Coding Test 2025</h1>
-    <p class="">Canada Economic Development <br /><strong>for Quebec Regions</strong></p>
-  </header>
+      }
+      footer {
+        margin-top: 2rem;
+        border-top: 1px solid #eee;
+        padding-top: 1rem;
+        color: #555;
+        font-size: 0.95rem;
+      }
 
-  <!-- Table of Contents (functional anchors) -->
-  <nav class="" aria-label="Table of contents">
-    <h2>Table of Content</h2>
-    <ul class="lst-none">
-      <li class="d-flex"><a href="#section-1" class="col-sm-11 p-0">Lorem ipsum dolor sit amet</a> <span>3</span></li>
+      .video-container {
+        position: relative;
+        width: 100%;
+        max-width: 560px; /* optional: limits max size */
+        margin: 0 auto; /* centers horizontally */
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+      }
+
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        max-height: 320px;
+      }
+    </style>
+  </head>
+  <body class="container">
+    <header class="text-center">
+      <h1 id="page-title">
+        <span> Coding Test 2025 </span>
+        <br />Canada Economic Development <br />for Quebec Regions
+      </h1>
+    </header>
+
+    <!-- Table of Contents (functional anchors) -->
+    <nav class="" aria-label="Table of contents">
+      <h2>Table of Content</h2>
       <ul class="lst-none">
-          <li class="d-flex"><a href="#section-2" class="col-sm-11 p-0">consectetur adipiscing elit</a><span>3</span></li>
-          <li><a href="#section-3" class="col-sm-11 p-0">consectetur adipiscing elit</a><span>3</span></li>
-          <li><a href="#section-4" class="col-sm-11 p-0">consectetur adipiscing elit</a><span>4</span></li>
-        </ul>
-      <li class="d-flex"><a href="#section-5" class="col-sm-11 p-0">Lorem ipsum dolor sit amet</a><span>4</span></li>
-      <li class="d-flex"><a href="#section-6" class="col-sm-11 p-0">Lorem ipsum dolor sit amet</a><span>5</span></li>
-      <li class="d-flex"><a href="#section-7" class="col-sm-11 p-0">Lorem ipsum dolor sit amet</a><span>5</span></li>
-      <li class="d-flex"><a href="#section-8" class="col-sm-11 p-0">Lorem ipsum dolor sit amet</a><span>5</span></li>
-      <li class="d-flex"><a href="#section-9" class="col-sm-11 p-0">Lorem ipsum dolor sit amet</a><span>6</span></li>
-    </ol>
-  </nav>
+        <li class="d-flex">
+          <a href="#section-1" class="col-xs-11 p-0"
+            >Lorem ipsum dolor sit amet</a
+          >
+          <span>3</span>
+        </li>
+        <li>
+          <ul class="lst-none">
+            <li class="d-flex">
+              <a href="#section-1-2" class="col-xs-11 p-0"
+                >consectetur adipiscing elit</a
+              ><span>3</span>
+            </li>
+            <li>
+              <a href="#section-1-3" class="col-xs-11 p-0"
+                >consectetur adipiscing elit</a
+              ><span>3</span>
+            </li>
+            <li>
+              <a href="#section-2" class="col-xs-11 p-0"
+                >consectetur adipiscing elit</a
+              ><span>4</span>
+            </li>
+          </ul>
+        </li>
+        <li class="d-flex">
+          <a href="#section-3" class="col-xs-11 p-0"
+            >Lorem ipsum dolor sit amet</a
+          ><span>4</span>
+        </li>
+        <li class="d-flex">
+          <a href="#section-4" class="col-xs-11 p-0"
+            >Lorem ipsum dolor sit amet</a
+          ><span>5</span>
+        </li>
+        <li class="d-flex">
+          <a href="#section-5" class="col-xs-11 p-0"
+            >Lorem ipsum dolor sit amet</a
+          ><span>5</span>
+        </li>
+        <li class="d-flex">
+          <a href="#section-6" class="col-xs-11 p-0"
+            >Lorem ipsum dolor sit amet</a
+          ><span>5</span>
+        </li>
+        <li class="d-flex">
+          <a href="#section-7" class="col-xs-11 p-0"
+            >Lorem ipsum dolor sit amet</a
+          ><span>6</span>
+        </li>
+      </ul>
+    </nav>
 
-  <main id="main-content" role="main" aria-labelledby="page-title">
-
-      
+    <main id="main-content" aria-labelledby="page-title">
       <!-- Section 1 -->
       <section id="section-1" tabindex="-1">
-          <h2 class="text-primary">Lorem ipsum dolor sit amet</h2>
-          <figure class="float-left mrgn-tp-md mrgn-rght-md" style="max-width:25`0px; float: left;">
-            <img src="./Pictures/Image 1 - EN.jpg" alt="northern lights behind a mountain" />  
-          </figure>
+        <h2 class="text-primary">Lorem ipsum dolor sit amet</h2>
+        <figure
+          class="float-left mrgn-tp-md mrgn-rght-md"
+          style="max-width: 250px; float: left"
+        >
+          <img
+            src="./Pictures/Image 1 - EN.jpg"
+            alt="northern lights behind a mountain"
+          />
+        </figure>
 
-      <span class="text-primary"><strong>consectetur adipiscing elit</strong></span>
+        <h3 class="text-primary">consectetur adipiscing elit</h3>
 
-      <p>
-        Turpis éros non justo suspendissé férmentum a èst aptent, mauris posuere sollicitudin imperdiet à mauris curae interdùm anonyma, sociosqu ante pellentesque sed torétoré £at pellentesque nostra, auctor porté senectus facilisis urna vitaé namé ultrices, amèt famès éuismod.
-        Juseo susîcpit tacîtié néc lacinia ad lobortis purus ultrices tellus egéstat susîcpit ultricies énis mattisé, odio mlius félis sempér fancibüs tincidûnt tellus pretium amèt cubliâ dui curàbitur augueé vehicula néc, at posuere eros placerat métus témpor ante lobortïs fancibüs félis.
-        Fuegiuia congue porté gravida vivamùs torétoré. Des "sélecrum" sodales aptenté pharétra mattisé, nullä vélit commodo nibh çunc, suspendisse ut egéstat éu. <sup><a href="#note1">1</a></sup>
-      </p>
+        <p>
+          Turpis éros non justo suspendissé férmentum a èst aptent, mauris
+          posuere sollicitudin imperdiet à mauris curae interdùm anonyma,
+          sociosqu ante pellentesque sed torétoré £at pellentesque nostra,
+          auctor porté senectus facilisis urna vitaé namé ultrices, amèt famès
+          éuismod. Juseo susîcpit tacîtié néc lacinia ad lobortis purus ultrices
+          tellus egéstat susîcpit ultricies énis mattisé, odio mlius félis
+          sempér fancibüs tincidûnt tellus pretium amèt cubliâ dui curàbitur
+          augueé vehicula néc, at posuere eros placerat métus témpor ante
+          lobortïs fancibüs félis. Fuegiuia congue porté gravida vivamùs
+          torétoré. Des "sélecrum" sodales aptenté pharétra mattisé, nullä vélit
+          commodo nibh çunc, suspendisse ut egéstat éu.
+          <sup><a href="#note1">1</a></sup>
+        </p>
 
-      <p>
-        Netus mlius suspendisse congés grâvida fames nulla, morbié £at vulputaté interdùm aénean séd placérat, class quém férmentum. Facilisis du vestibulum massè laçus sem pharetra curabitur lacinia quisqué vel aliquét cubilia aliquét phaséllœs felis vestibulum feugiat aliquét dïam pésuéré nam ultrices duis elementum quisque facilisis nisï, iaculisé porté nostra mié dolor tristiq ad sempér lectus conubia ultrices commodoé porttitor adipiscing tellus in.
-      </p>
+        <p>
+          Netus mlius suspendisse congés grâvida fames nulla, morbié £at
+          vulputaté interdùm aénean séd placérat, class quém férmentum.
+          Facilisis du vestibulum massè laçus sem pharetra curabitur lacinia
+          quisqué vel aliquét cubilia aliquét phaséllœs felis vestibulum feugiat
+          aliquét dïam pésuéré nam ultrices duis elementum quisque facilisis
+          nisï, iaculisé porté nostra mié dolor tristiq ad sempér lectus conubia
+          ultrices commodoé porttitor adipiscing tellus in.
+        </p>
+      </section>
+      <!-- section 1-2  -->
+      <section id="section-1-2" tabindex="-1">
+        <h3 class="h4 text-primary">consectetur adipiscing elit</h3>
+        <div class="d-flex text-center">
+          <div class="col-xs-4">
+            <img
+              src="./Pictures/Melanie Joly - EN.jpg"
+              alt="Sed a ipsum vel nisl luctus suscipit eu non leo. Praesent vel mattis ex, eget imperdiet nisi."
+              class="image"
+            />
 
-      <h3>consectetur adipiscing elit</h3>
+            <p>
+              Vehicula ut suspendisse donéc quisqué maécènas vulputate
+              "sélecrum" çurcus grâvida classé venesatis auctor leo, nterdùm
+              facilisis odio
+            </p>
+          </div>
+          <div class="col-xs-4">
+            <img
+              src="./Pictures/Sony Perron - EN.png"
+              alt="Nullam elementum, elit et condimentum facilisis, neque libero ultricies odio, a consectetur nisi ligula quis diam. Sed sit amet nisl et lacus iaculis laoreet."
+              class="image"
+            />
 
-      <ul>
-        <li>Vehicula ut suspendisse donéc quisqué maécènas vulputate "sélecrum" çurcus grâvida classé venesatis auctor leo, nterdùm facilisis odio</li>
-        <li>Vehicula ut suspendisse donéc quisqué maécènas vulputate "sélecrum" çurcus grâvida classé venesatis auctor leo, interdùm facilisis odio vulputaté nequé malesuada facîlisis aliquét</li>
-        <li>Vehicula ut suspendisse donéc quisqué maécènas vulputate "sélecrum" çurcus grâvida classé venesatis auctor leo, interdùm facilisis odio vulputaté nequé malesuada facîlisis aliquét laçus orci lilitoxic donec,</li>
-      </ul>
-    </section>
+            <p>
+              Vehicula ut suspendisse donéc quisqué maécènas vulputate
+              "sélecrum" çurcus grâvida classé venesatis auctor leo, interdùm
+              facilisis odio vulputaté nequé malesuada facîlisis aliquét
+            </p>
+          </div>
+          <div class="col-xs-4">
+            <img
+              src="./Pictures/CED Logo.png"
+              alt="Pellentesque nulla tortor, convallis eu venenatis ut, luctus quis metus."
+              class="image"
+            />
 
-    <!-- Section 2 -->
-    <section id="section-2" tabindex="-1">
-      <h2>consectetur adipiscing elit</h2>
+            <p>
+              Vehicula ut suspendisse donéc quisqué maécènas vulputate
+              "sélecrum" çurcus grâvida classé venesatis auctor leo, interdùm
+              facilisis odio vulputaté nequé malesuada facîlisis aliquét laçus
+              orci lilitoxic donec,
+            </p>
+          </div>
+        </div>
+      </section>
 
-      <p>
-        Vehicula ut suspendisse donéc quisqué maécènas vulputate "sélecrum" çurcus grâvida classé venesatis auctor leo, interdùm facilisis odio vulputaté nequé malesuada facîlisis aliquét laçus orci lilitoxic donec, lobortis anonyma platea sit grâvida risus imperdiét vitaé fuegiuia sempér convallis à étiam.
-        Aliquam habitasse nullam conubié bibendum nûllam sém aptenté félis ad vivamus, malésdum hendrerit metus in convallis àc néc nibh enim rhoncus, litoré leçtus donec fusce malesuada liçlà neque quisquées cursus accumasa. Proin "sélecrum" lilitoxic fusce magna
-      </p>
+      <!-- Section 1-3-->
+      <section id="section-1-3" tabindex="-1">
+        <h3 class="h4 text-primary">consectetur adipiscing elit</h3>
 
-      <h3>Dui métus taciti fuegiuia placérat</h3>
-      <p>Amet éuismod lilitoxic pulvîar</p>
-      <p>Quis vulputate éros turpis quis lorém</p>
-      <p>Consequat interdum luctus maécènas</p>
-      <p>Porttitor ultrûcéas pérè</p>
-    </section>
+        <p>
+          Vehicula ut suspendisse donéc quisqué maécènas vulputate "sélecrum"
+          çurcus grâvida classé venesatis auctor leo, interdùm facilisis odio
+          vulputaté nequé malesuada facîlisis aliquét laçus orci lilitoxic
+          donec, lobortis anonyma platea sit grâvida risus imperdiét vitaé
+          fuegiuia sempér convallis à étiam. Aliquam habitasse nullam conubié
+          bibendum nûllam sém aptenté félis ad vivamus, malésdum hendrerit metus
+          in convallis àc néc nibh enim rhoncus, litoré leçtus donec fusce
+          malesuada liçlà neque quisquées cursus accumasa. Proin "sélecrum"
+          lilitoxic fusce magna
+        </p>
+        <ul>
+          <li>Dui métus taciti fuegiuia placérat</li>
+          <li>Amet éuismod lilitoxic pulvîar</li>
+          <li>Quis vulputate éros turpis quis lorém</li>
+          <li>Consequat interdum luctus maécènas</li>
+          <li>Porttitor ultrûcéas pérè</li>
+        </ul>
+      </section>
 
-    <!-- Section 3 (figure alt text and version text) -->
-    <section id="section-3" tabindex="-1">
-      <h2>Lorem ipsum dolor sit amet</h2>
+      <!-- Section 2 (figure alt text and version text) -->
+      <section id="section-2" tabindex="-1">
+        <h2 class="h3 text-primary">Lorem ipsum dolor sit amet</h2>
 
-      <p>
-        Vehicula ut suspendisse donéc quisqué maécènas vulputate "sélecrum" çurcus grâvida classé venesatis auctor leo, interdùm facilisis odio vulputaté nequé.
-      </p>
+        <p>
+          Vehicula ut suspendisse donéc quisqué maécènas vulputate "sélecrum"
+          çurcus grâvida classé venesatis auctor leo, interdùm facilisis odio
+          vulputaté nequé.<sup>2</sup>
+        </p>
 
-      <h3>Figure 1</h3>
-      <p>Consequat interdum luctus maécènas</p>
+        <h3>Figure 1</h3>
+        <p class="d-block">
+          <strong>Consequat interdum luctus maécènas</strong>
+        </p>
+        <figure>
+          <img
+            src="./Pictures/graph.png"
+            alt="a graph showing various numbers"
+          />
+        </figure>
+        <details>
+          <summary>Version texte – Figure 1</summary>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac
+            sodales odio. Nam tellus metus, convallis a aliquet sit amet,
+            iaculis eu diam. Vestibulum ante ipsum primis in faucibus orci
+            luctus et ultrices posuere cubilia curae; Sed aliquet lacus nec
+            lacus auctor semper. Maecenas euismod sit amet sem sed molestie.
+            Proin non convallis urna. Mauris nibh lectus, malesuada a metus at,
+            finibus tincidunt massa. Ut suscipit suscipit ipsum eu vehicula.
+            Morbi leo arcu, dictum quis mattis et, hendrerit quis urna.
+            Curabitur sed sem volutpat, placerat libero a, ultrices nisl. Aenean
+            rhoncus leo est, nec tincidunt quam mattis at.
+          </p>
+        </details>
+      </section>
 
-      <h4>► Version texte – Figure 1</h4>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac sodales odio. Nam tellus metus, convallis a aliquet sit amet, iaculis eu diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed aliquet lacus nec lacus auctor semper. Maecenas euismod sit amet sem sed molestie. Proin non convallis urna. Mauris nibh lectus, malesuada a metus at, finibus tincidunt massa. Ut suscipit suscipit ipsum eu vehicula. Morbi leo arcu, dictum quis mattis et, hendrerit quis urna. Curabitur sed sem volutpat, placerat libero a, ultrices nisl. Aenean rhoncus leo est, nec tincidunt quam mattis at.
-      </p>
-    </section>
+      <!-- Section 4 -->
+      <section id="section-4" tabindex="-1">
+        <h2 class="h3 text-primary">Lorem ipsum dolor sit amet</h2>
 
-    <!-- Section 4 -->
-    <section id="section-4" tabindex="-1">
-      <h2>Lorem ipsum dolor sit amet</h2>
+        <p>
+          Potenti himenaeos aptent commodo porta vestibulum égét, metus nètus
+          pulvîar amèt mattisé.
+        </p>
+        <button>Lorem Ipsum</button>
+        <button>Lorem Ipsum</button>
+        <button>Lorem Ipsum</button>
+      </section>
 
-      <p>Potenti himenaeos aptent commodo porta vestibulum égét, metus nètus pulvîar amèt mattisé.</p>
+      <!-- Section 5 -->
+      <section id="section-5" tabindex="-1">
+        <h2 class="h3 text-primary">Lorem ipsum dolor sit amet</h2>
 
-      <h3>Lorem Ipsum</h3>
-      <p>Lorem Ipsum</p>
+        <p>
+          Potenti himenaeos aptent commodo porta vestibulum égét, metus nètus
+          pulvîar amèt mattisé aenanm duèis, iaculisé dès dui vitaé lorém
+          sociosqu. Nisi péer nisï hâc prétium interdùm léo congue at molestié
+          non potentié, fusce pulvinar duis justo fermentum. <sup>3</sup>
+        </p>
+        <div class="video-container mrgn-tp-xl mrgn-bttm-xl">
+          <iframe
+            src="https://www.youtube.com/embed/0w5cby3ix98"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
 
-      <h3>Lorem Ipsum</h3>
-      <p>Lorem Ipsum</p>
+      <!-- Section 6 -->
+      <section id="section-6" tabindex="-1">
+        <h2 class="h3 text-primary">Lorem ipsum dolor sit amet</h2>
+        <div class="d-flex">
+          <strong class="col-xs-4 bg-primary brdr-bttm"
+            >Etiam a mi vestibulum</strong
+          >
+          <span class="col-xs-8">Phasellus tempus metus vitae</span>
+        </div>
+        <div class="d-flex">
+          <strong class="col-xs-4 bg-primary brdr-bttm">volutpat leo id</strong>
+          <span class="col-xs-8">Programme permanent</span>
+        </div>
+        <div class="d-flex">
+          <strong class="col-xs-4 bg-primary brdr-bttm"
+            >diam nulla, vehicula dignissim</strong
+          >
+          <span class="col-xs-8">Integer vitae</span>
+        </div>
+        <div class="d-flex">
+          <strong class="col-xs-4 bg-primary brdr-bttm"
+            >nec, elementum sed eni</strong
+          >
+          <span class="col-xs-8"
+            >Vestibulum ultrices nisl id nisi finibus, in tincidunt lectus
+            aliquet</span
+          >
+        </div>
+        <div class="d-flex">
+          <strong class="col-xs-4 bg-primary brdr-bttm"
+            >Donec eu mi sapien. Quisque ex augue, gravida sit amet
+            vehicula</strong
+          >
+          <span class="col-xs-8">Pellentesque mauris</span>
+        </div>
+        <div class="d-flex">
+          <div class="col-xs-4 bg-primary brdr-bttm">
+            <strong>
+              Phasellus ut tempor ex, eget vehicula magna. Nulla in metus
+              ultrices,
+            </strong>
+          </div>
+          <div class="col-xs-8">
+            <span>
+              Donec ac euismod est. Cras finibus varius suscipit. Sed tempor
+              auctor diam, et feugiat nisi. Vivamus sit amet posuere mauris.
+              Pellentesque dui augue, facilisis vel ante nec, laoreet varius est
+              :
+            </span>
+            <ol>
+              <li>
+                Sed nisi libero, sagittis eu elit at, tempus placerat urna.
+                Quisque nulla libero, porta ut aliquam ut, mollis at metus. ;
+              </li>
+              <li>
+                Pellentesque habitant morbi tristique senectus et netus et
+                malesuada fames ac turpis egestas. Cras nibh dui, mattis et
+                volutpat nec, sodales id lectus. Quisque aliquam et ante eget
+                luctus. Duis quis mauris sit amet orci pretium fringilla.
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="d-flex">
+          <strong class="col-xs-4 bg-primary brdr-bttm"
+            >vestibulum vitae</strong
+          >
+          <div class="col-xs-8">
+            <span
+              >Donec libero est, consequat vel sollicitudin eu, lobortis non
+              lorem. Sed hendrerit dapibus dui non rutrum. Fusce condimentum
+              tortor varius sem :
+            </span>
+            <ul>
+              <li>Nunc vel orci vel purus aliquam euismod quis vel lorem.</li>
+              <li>
+                <ul>
+                  <li>Donec vulputate turpis at scelerisque pretium.</li>
+                  <li>Nulla sodales purus id mauris sagittis scelerisque.</li>
+                  <li>
+                    Quisque viverra ante convallis enim tincidunt volutpat
+                  </li>
+                </ul>
+              </li>
+              <li>Sed luctus tellus non libero aliquet finibus.</li>
+              <li>Duis at magna laoreet lectus mollis ultricies at ac erat.</li>
+              <li>
+                <ul>
+                  <li>Praesent eget lacus vitae neque egestas consectetur.</li>
+                  <li>Mauris interdum metus quis elit tristique lobortis.</li>
+                </ul>
+              </li>
+              <li>Quisque ac est at nibh luctus interdum at ultrices augue.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-      <h3>Lorem Ipsum</h3>
-      <p>Lorem Ipsum</p>
-    </section>
+      <!-- Section 7-->
+      <section id="section-7" tabindex="-1">
+        <h2 class="h3 text-primary">Lorem ipsum dolor sit amet</h2>
+        <p>
+          Pesuere porttitor éuismod àc consequat ullamcorper habitant duis
+          etiam, lobortïs classé phaséllœs donéc augue tortor venesatis metus,
+          aliquam malésdum rûtrum porté scelerisque magna nisï grâvida. Est
+          sollicitudin félis taciti arcû molestie venenatis!
+        </p>
+        <span><strong>Sed ut perspiciatis</strong></span>
+      </section>
 
-    <!-- Section 5 -->
-    <section id="section-5" tabindex="-1">
-      <h2>Lorem ipsum dolor sit amet</h2>
-
-      <p>
-        Potenti himenaeos aptent commodo porta vestibulum égét, metus nètus pulvîar amèt mattisé aenanm duèis, iaculisé dès dui vitaé lorém sociosqu. Nisi péer nisï hâc prétium interdùm léo congue at molestié non potentié, fusce pulvinar duis justo fermentum.
-      </p>
-    </section>
-
-    <!-- Section 6 -->
-    <section id="section-6" tabindex="-1">
-      <h2>Lorem ipsum dolor sit amet</h2>
-
-      <p>
-        Etiam a mi vestibulum. Phasellus tempus metus vitae, volutpat leo id. Programme permanent — diam nulla, vehicula dignissim. Integer vitae nec, elementum sed eni. Vestibulum ultrices nisl id nisi finibus, in tincidunt lectus aliquet.
-      </p>
-
-      <p>Donec eu mi sapien. Quisque ex augue, gravida sit amet vehicula. Pellentesque mauris. Phasellus ut tempor ex, eget vehicula magna. Nulla in metus ultrices.</p>
-
-      <p>
-        Donec ac euismod est. Cras finibus varius suscipit. Sed tempor auctor diam, et feugiat nisi. Vivamus sit amet posuere mauris. Pellentesque dui augue, facilisis vel ante nec, laoreet varius est.
-      </p>
-    </section>
-
-    <!-- Section 7: lists and values -->
-    <section id="section-7" tabindex="-1">
-      <h2>Lorem ipsum dolor sit amet</h2>
-
-      <p>
-        Pesuere porttitor éuismod àc consequat ullamcorper habitant duis etiam, lobortïs classé phaséllœs donéc augue tortor venesatis metus, aliquam malésdum rûtrum porté scelerisque magna nisï grâvida. Est sollicitudin félis taciti arcû molestie venenatis!
-      </p>
-
-      <h3>Sed ut perspiciatis</h3>
-      <p>Nemo :</p>
-
-      <dl>
-        <dt>Manlius Torquatus</dt>
-        <dd>Laborum : 2019-02-19</dd>
-
-        <dt>Dolores :</dt>
-        <dd>Commodi consequatur</dd>
-
-        <dt>Fugit :</dt>
-        <dd><a href="mailto:manlius@finibus.rom">manlius@finibus.rom</a></dd>
-
-        <dt>Modi :</dt>
-        <dd>123 456-7890</dd>
-      </dl>
-
-      <p>Maecenas ligula massa</p>
-
-      <table aria-label="Sample table from document" style="border-collapse:collapse; width:100%; max-width:720px;">
-        <thead>
-          <tr>
-            <th style="text-align:left; border-bottom:1px solid #ddd; padding:0.3rem;">Item</th>
-            <th style="text-align:right; border-bottom:1px solid #ddd; padding:0.3rem;">Qty</th>
-            <th style="text-align:right; border-bottom:1px solid #ddd; padding:0.3rem;">Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="padding:0.3rem;">Fusce varius</td>
-            <td style="text-align:right; padding:0.3rem;">1</td>
-            <td style="text-align:right; padding:0.3rem;">29,95 $</td>
-          </tr>
-          <tr>
-            <td style="padding:0.3rem;">Sapien eros vitae</td>
-            <td style="text-align:right; padding:0.3rem;">2</td>
-            <td style="text-align:right; padding:0.3rem;">32,57 $</td>
-          </tr>
-          <tr>
-            <td style="padding:0.3rem;">Praesent aliquam</td>
-            <td style="text-align:right; padding:0.3rem;">1</td>
-            <td style="text-align:right; padding:0.3rem;">3,99 $</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td style="padding:0.3rem; font-weight:bold;">Total</td>
-            <td style="padding:0.3rem;"></td>
-            <td style="text-align:right; padding:0.3rem; font-weight:bold;">204,69 $</td>
-          </tr>
-        </tfoot>
-      </table>
-    </section>
-
-    <!-- Section 8: multimedia -->
-    <section id="section-8" class="media" tabindex="-1">
-      <h2>Multimedia Player</h2>
-      <p>The HTML5 video player below is integrated into the page. Replace <code>media/sample.mp4</code> and/or <code>media/sample.webm</code> with your actual media files.</p>
-
-      <video controls width="720" aria-describedby="video-desc">
-        <!-- Provide multiple formats for compatibility -->
-        <source src="media/sample.webm" type="video/webm">
-        <source src="media/sample.mp4" type="video/mp4">
-        <!-- Fallback: link to download or open in a new tab -->
-        Your browser does not support embedded video. <a href="media/sample.mp4">Download the video file</a>.
-      </video>
-
-      <p id="video-desc">This is an embedded demonstration video. Provide captions/alternatives as needed.</p>
-
-      <!-- Accessible text alternative (WET guidance: provide text-only version) -->
-      <div class="version-text" style="margin-top:0.5rem; padding:0.5rem; background:#f7f7f7; border:1px solid #eee;">
-        <strong>Version texte</strong>: A plain-text alternative summarizing the video content should be placed here for screen readers or low-bandwidth users.
-      </div>
-    </section>
-
-    <!-- Section 9: links & contact -->
-    <section id="section-9" tabindex="-1">
-      <h2>Contact & Links</h2>
-
-      <p>Contact email: <a href="mailto:manlius@finibus.rom">manlius@finibus.rom</a></p>
-      <p>Website: <a href="http://www.finibus.rom" target="_blank" rel="noopener noreferrer">www.finibus.rom</a></p>
-
-      <p>Additional resources and links (functional):</p>
-      <ul>
-        <li><a href="#section-1">Return to Lorem ipsum dolor sit amet</a></li>
-        <li><a href="#section-8">Jump to multimedia player</a></li>
-      </ul>
-    </section>
-
-    <div class="clear" aria-hidden="true"></div>
-
-  </main>
-
-  <footer role="contentinfo">
-    <p>Converted from the uploaded Word document.</p>
-    <p>Source: <em>Coding Test EN - 2025.docx</em>. :contentReference[oaicite:1]{index=1}</p>
-  </footer>
-
-</body>
+      <!-- section 8 -->
+       <section>
+        <table>
+          
+        </table>
+       </section>
+    </main>
+  </body>
 </html>
-
